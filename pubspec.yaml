@@ -1,6 +1,7 @@
 name: android_nav_setting
 description: "It is used to fetch navigation setting selected on Android devices"
-version: 0.0.1
+version: 0.0.2
+repository: https://github.com/sunnykinger/android_nav_setting
 homepage:
 
 environment:
