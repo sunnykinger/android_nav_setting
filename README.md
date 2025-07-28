@@ -15,7 +15,7 @@ To use this plugin in your Flutter project, add it to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  android_nav_setting: ^0.1.0
+  android_nav_setting: ^0.0.2+1
 ```
 
 Then, run `flutter pub get` to install the plugin.
