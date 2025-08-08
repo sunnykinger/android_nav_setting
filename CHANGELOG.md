@@ -1,3 +1,9 @@
+## [0.0.2+2]
+### Fixed
+- Fixed imports issue
+
+---
+
 ## [0.0.2+1]
 ### Fixed
 - Updated README file
