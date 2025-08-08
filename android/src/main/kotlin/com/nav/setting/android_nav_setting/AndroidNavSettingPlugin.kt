@@ -1,5 +1,10 @@
 package com.nav.setting.android_nav_setting
 
+import android.content.Context
+import android.os.Build
+import android.provider.Settings
+import android.util.Log
+import androidx.annotation.NonNull
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -22,7 +27,7 @@ class AndroidNavSettingPlugin : FlutterPlugin, MethodCallHandler {
         context = flutterPluginBinding.applicationContext
     }
 
-    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: MethodChannel.Result) {
+    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
             "isThreeButtonNavigationEnabled" -> {
                 result.success(isThreeButtonNavigation())
@@ -51,7 +56,7 @@ class AndroidNavSettingPlugin : FlutterPlugin, MethodCallHandler {
                 0
             }
         } catch (e: Settings.SettingNotFoundException) {
-            Log.e(TAG, "Error reading navigation mode", e)
+            Log.e("AndroidNavSettingPlugin", "Error reading navigation mode", e)
             0 // Fallback
         }
     }
